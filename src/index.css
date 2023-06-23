@@ -1,0 +1,116 @@
+.bannerColor{
+    background-color: #F1F3FF;
+    padding-top: 15px;
+}
+
+.navbarCustom{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoNavbar{
+    margin-right: 300px;
+    width: 100px;
+    height: 34px;
+    background-color: #0D28A6
+    
+}
+.menuCustom{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.bannerLeft h1{
+    color: #000;
+    font-size: 36px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.bannerLeft p{
+    color: #000;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.bannerLeft button{
+    border-radius: 2px;
+    background-color:  #5CB85F;
+    /* display: inline-flex; */
+    border: none;
+    padding: 8px 12px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* gap: 10px; */
+    color: white;
+}
+
+.bannerRight img{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* position: absolute; */
+    /* max-width: min-content; */
+    height: 407px;
+    width: 704px;
+    /* max-width: fit-content; */
+}
+
+.ourService{
+    margin-top: 6%;
+}
+
+.ourService2 h1{
+    color: #000;
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.ourService2 p{
+    color: #000;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.checklist{
+    display: flex;
+}
+.checklist img{
+    width: 25px;
+    height: 25px;
+}
+.checklist p{
+    margin-left: 16px;
+}
+
+.whyBox{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.whyBox h3{
+    font-size: 16px;
+}
+
+.whyBox h5{
+    font-size: 14px;
+}
+
+.whyBox img{
+    width: 32px;
+    height: 32px;
+}
+
+.search{
+    display: flex;
+}
