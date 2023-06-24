@@ -10,7 +10,7 @@ const Navbarr = ({menu}) =>{
                     <p className='logoNavbar'></p>
                     <a className='menuCustom'>{menu.map((item) => (
                         <Nav>
-                            <Nav.Link className='menuCustom' href="/cars">
+                            <Nav.Link className='menuCustom' href="/">
                                 {item}
                             </Nav.Link>
                         </Nav>
