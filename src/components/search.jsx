@@ -2,17 +2,15 @@ import Container from 'react-bootstrap/Container';
 import React, {useEffect, useState} from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import '../index.css';
-import carMercy from '../assets/Mercedes.png';
 import axios from "axios";
+import {useNavigate} from 'react-router-dom';
 
 
 const Searchh = ({}) =>{
-    const[name, setName] = useState([]);
+    let[name, setName] = useState(["null"]);
     const[data, setData] = useState([]);
+    const navigate = useNavigate();
     
     useEffect(()=> {
         getData();
@@ -22,23 +20,34 @@ const Searchh = ({}) =>{
         const api = `https://bootcamp-rent-cars.herokuapp.com/customer/v2/car?name=${name}`;
     
         axios.get(api).then((res) => {
-            setData(res.data);
+            setData(res.data.cars);
         })
         .catch((err) => console.log(err));
     };
 
     const handleChangeName = (e) => {
-        setName(e.target.value);
+        // setName(e.target.value);
+        const value = e.target.value.trim(); // Menghapus spasi di awal dan akhir string
+
+        if (value === '') {
+            setName('null');
+        } else {
+            setName(value);
+        }
     }
+    const redirect = () => {
+        // console.log(name);
+        navigate(`/result/${name}`);
+    };
     return(
         <>
             <Container className='search'>
                 <Row>
                     <Col>
                         <p>Nama Mobil</p>
-                        <input type="text" onChange={handleChangeName}/>
+                        <input type="text" onChange={handleChangeName} />
                     </Col>
-                    <Col>
+                    {/* <Col>
                         <p>Kategori</p>
                         <select id="dropdown" >
                             <option value="">-- Masukan Kapasitas Mobil --</option>
@@ -50,7 +59,7 @@ const Searchh = ({}) =>{
                     <Col>
                         <p>Harga</p>
                         <input type="number" />
-                    </Col>
+                    </Col> */}
                     {/* <Col>
                         <p>Status</p>
                         <select id="dropdown" >
@@ -61,20 +70,10 @@ const Searchh = ({}) =>{
                         </select>
                     </Col> */}
                     <Col>
-                        <button onClick={getData}>Cari Mobil</button>
+                        {/* <button onClick={getData}>Cari Mobil</button> */}
+                        <button onClick={redirect}>Cari Mobil</button>
+                        {/* <button onClick={() => redirect(item.id)}>Pilih Mobil</button> */}
                     </Col>
-                </Row>
-                <Row>
-                {
-                    data.map((item) => (
-                        <div>
-                            <img src={item.image} />
-                            <h1>{item.name}</h1>
-                            <p>{item.price}</p><br />
-                            <button onClick={() => redirect(item.id)}>Pilih Mobil</button>
-                        </div>
-                    ))
-                }
                 </Row>
             </Container>
         </>
