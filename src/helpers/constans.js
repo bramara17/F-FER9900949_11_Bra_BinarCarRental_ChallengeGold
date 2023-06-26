@@ -8,23 +8,23 @@ export const checkList = ['Sewa Mobil Dengan Supir di Bali 12 Jam',
 export const FAQ =[
     {
         question:"Apa saja syarat yang dibutuhkan?",
-        answer: "Lorem"
+        answer: "Siapkan KTP, KK, dan SIM A kamu ya"
     },
     {
-        question:"Apa saja syarat yang dibutuhkan?",
-        answer: "Lorem"
+        question:"Berapa hari minimal sewa mobil lepas kunci?",
+        answer: "Sewa mobil lepas kunci bisa mulai dari minimal 12 jam"
     },
     {
-        question:"Apa saja syarat yang dibutuhkan?",
-        answer: "Lorem"
+        question:"Berapa hari sebelumnya booking sewa mobil?",
+        answer: "Sebaiknya selambat-lambatnya H-1 sebelum penyewaan mobil agar kami bisa mengecek ketersediaan dan menyiapkan mobil agar nyaman saat digunakan"
     },
     {
-        question:"Apa saja syarat yang dibutuhkan?",
-        answer: "Lorem"
+        question:"Apakah Ada biaya antar-jemput?",
+        answer: "Pada jarak minimum 5KM dari tempat kami tidak dikenakan biaya, lewat dari itu maka per 1KM sebesar Rp.5000"
     },
     {
-        question:"Apa saja syarat yang dibutuhkan?",
-        answer: "Lorem"
+        question:"Bagaimana jika terjadi kecelakaan?",
+        answer: "Kami harap agar penyewa bisa bertanggung jawab dan kooperatif sesuai kejadian yang terjadi"
     },
 ]
 

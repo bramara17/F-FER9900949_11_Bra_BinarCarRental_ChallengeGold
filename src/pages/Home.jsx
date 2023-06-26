@@ -7,16 +7,23 @@ import Banner from "../components/Banner";
 import WhyUss from "../components/WhyUs";
 import { checkList, WhyUs } from '../helpers/constans.js';
 import Searchh from "../components/search"
+import Testimony from "../components/Testimony"
+import OrderNow from "../components/OrderNow"
+import Footer from "../components/Footer"
+
 function Home(){
+    
     return(
         <>
-            
             <NavbarMain menu={menuList} logo="Binar" />
             <Banner/>
-            <Searchh/>
+            {/* <Searchh/> */}
             <BestCar checklist={checkList}/>
             <WhyUss object={WhyUs}/>
-            {/* <FAQPage question={FAQ}/> */}
+            <Testimony/>
+            <OrderNow/>
+            <FAQPage question={FAQ}/>
+            <Footer menu={menuList}/>
         </>
     )
 }

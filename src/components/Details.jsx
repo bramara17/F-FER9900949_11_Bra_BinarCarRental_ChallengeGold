@@ -8,15 +8,14 @@ import Col from 'react-bootstrap/Col';
 import '../index.css';
 import axios from "axios";
 import {useParams} from 'react-router-dom';
-import CardHeader from 'react-bootstrap/esm/CardHeader';
 import {useNavigate} from 'react-router-dom';
+import CardHeader from 'react-bootstrap/esm/CardHeader';
 
 
-const Resultt = ({}) =>{
+const Detailss = ({}) =>{
     // const[name, setName] = useState([]);
     const[data, setData] = useState(['null']);
     let {name} = useParams();
-    const navigate = useNavigate();
     
     useEffect(()=> {
         getData();
@@ -43,43 +42,34 @@ const Resultt = ({}) =>{
 
     useEffect(()=> {
         getData();
-    },[]);
-
-    const redirect = () => {
-        // console.log(name);
-        navigate(`/details/${name}`);
-    };
+    },[])
     return(
         <>
+            
             <Container className='cardCustom'>
                 <Row >
-                {data && data.length > 0 ? (
-                    data.map((item) => (
-                        
+                    <h1>Detail Car</h1>
+                    <div className='details'>
+                        <Col>
+                    
+                        </Col>
+                        <Col>
                             <Card style={{ width: '333px' }} className="custom-card">
-                                <Card.Img variant="top" src={item.image} alt="Gambar Mobil"/>
+                                <Card.Img variant="top" src={data[0].image} alt="Gambar Mobil"/>
                                 <Card.Body>
-                                    <Card.Subtitle className="mb-2 text-muted">{item.name}</Card.Subtitle>
-                                    <Card.Title>{item.price}</Card.Title>
+                                    <Card.Subtitle className="mb-2 text-muted">{data[0].name}</Card.Subtitle>
+                                    <Card.Title>{data[0].price}</Card.Title>
                                     <Card.Text>
-                                        {item.category}
+                                        {data[0].category}
                                     </Card.Text>
-                                    {/* <Button variant="success" onClick={redirect(item.name)}>Go somewhere</Button> */}
-                                    <Button variant="success">Go somewhere</Button>
                                 </Card.Body>
                             </Card>
-                    ))
-                ):(
-                    <div>
-                        <br />
-                        <h1>Tidak ada data</h1>
+                        </Col>
                     </div>
-                    
-                )}
                 </Row>
             </Container>
         </>
     )
 }
 
-export default Resultt;
+export default Detailss;

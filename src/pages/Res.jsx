@@ -8,13 +8,15 @@ import WhyUss from "../components/WhyUs";
 import ResView from "../components/ResultView"
 import { checkList, WhyUs } from '../helpers/constans.js';
 import Searchh from "../components/search"
+import Footer from "../components/Footer"
+
 function Result(){
     return(
         <>
-            
             <NavbarMain menu={menuList} logo="Binar" />
             <Searchh/>
             <ResView/>
+            <Footer menu={menuList}/>
         </>
     )
 }

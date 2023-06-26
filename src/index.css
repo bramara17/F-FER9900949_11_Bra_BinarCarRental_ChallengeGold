@@ -42,12 +42,8 @@
 .bannerLeft button{
     border-radius: 2px;
     background-color:  #5CB85F;
-    /* display: inline-flex; */
     border: none;
     padding: 8px 12px;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* gap: 10px; */
     color: white;
 }
 
@@ -112,5 +108,116 @@
 }
 
 .search{
+    width: 1047px;
+    height: 106px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    background-color: white;
     display: flex;
+    align-items: center;
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* top: 45%; */
+}
+
+.search button{
+    border-radius: 2px;
+    background-color:  #5CB85F;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+  }
+
+.carousel-Custom{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 619px;
+    height: 270px;
+    flex-shrink: 0;
+
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-Caption{
+    display: flex;
+    align-items: center;   
+}
+
+.order{
+    background-color: #0D28A6;
+    color: white;
+    border-radius: 13px;
+    align-items: center;
+    text-align: center;
+    width: 1168px;
+    height: 326px;
+
+}
+
+.order h1{
+    font-size: 36px;
+    font-family: Arial;
+}
+.order p{
+    font-size: 14px;
+}
+.order button{
+    border-radius: 2px;
+    background-color:  #5CB85F;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+}
+
+.faq{
+    display: flex;
+}
+
+.footer-menu{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.iconSocmed{
+    margin-right: 15px;
+}
+
+.cardCustom{
+    display: flex;
+    justify-content: space-between;
+}
+.cardCustom img{
+    /* display: flex; */
+    width: 270px;
+    height: 160px;
+}
+
+.cardCustom button{
+    border-radius: 2px;
+    height: 48px;
+    background-color:  #5CB85F;
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    width: 100%;
+}
+
+.custom-card{
+    margin-right: 20px;
+    padding: 24px;
+    align-items: center;
+}
+
+.detailss {
+    
 }
